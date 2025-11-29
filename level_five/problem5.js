@@ -9,10 +9,13 @@
 // ============================================
 // Task: Use && to check both bidderStatus and age
 // Hint: Both conditions must be true for && to work
+
 function easyProblem1(bidderStatus, age) {
-    // TODO: Write your code here
-    // If bidderStatus is "VIP" AND age is 21, return "can access"
-    // Otherwise return "go home"
+    if (bidderStatus === "VIP" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -25,10 +28,14 @@ console.log("Easy 1 - Test 3:", easyProblem1("Regular", 21)); // Should print: "
 // ============================================
 // Task: Check if bidderStatus is different from "VIP"
 // Hint: !== checks if values are NOT equal
+
 function easyProblem2(bidderStatus, age) {
-    // TODO: Write your code here
-    // If age is 21 AND bidderStatus is NOT "VIP", return "can sign in"
-    // Otherwise return "go home"
+    if (age === 21 && bidderStatus !== "VIP") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
+
 }
 
 // Test your code:
@@ -41,19 +48,15 @@ console.log("Easy 2 - Test 3:", easyProblem2("Guest", 19)); // Should print: "go
 // ============================================
 // Task: Write all three conditions using if-else if-else
 // Hint: Check each condition carefully
+
 function mediumProblem(bidderStatus, age) {
-    // TODO: Write your code here
-    // Write a complete if-else if-else chain:
-    // 
-    // if (first condition) {
-    //     return "can access"
-    // } else if (second condition) {
-    //     return "can sign in"
-    // } else {
-    //     return "go home"
-    // }
-    //
-    // Remember: Check bidderStatus === "VIP" && age === 21 first!
+    if (bidderStatus === "VIP" && age === 21) {
+        return "can access";
+    } else if (age === 21 && bidderStatus !== "VIP") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -68,19 +71,17 @@ console.log("Medium - Test 5:", mediumProblem("Member", 25)); // Should print: "
 // ============================================
 // Task: Use nested if-else statements with proper structure
 // Hint: Think about the logic flow - what should be checked first?
+
 function hardProblem(bidderStatus, age) {
-    // TODO: Write your code here
-    // Create nested if statements:
-    //
-    // First, check if age is 21:
-    //   - If age is 21:
-    //     - Check bidderStatus:
-    //       - If bidderStatus is "VIP" → return "can access"
-    //       - If bidderStatus is anything else → return "can sign in"
-    //   - If age is NOT 21:
-    //     - Return "go home"
-    //
-    // Why is this structure better? Think about it!
+    if (age === 21) {
+        if (bidderStatus === "VIP") {
+            return "can access";
+        } if (bidderStatus !== "VIP") {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:

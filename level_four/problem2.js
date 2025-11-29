@@ -9,10 +9,13 @@
 // ============================================
 // Task: Use === to check exact match
 // Hint: === checks both value and type
+
 function easyProblem1(playerStatus, age) {
-    // TODO: Write your code here
-    // Use === to check if playerStatus equals "HighRoller" AND age equals 21
-    // Return "can access" if true, otherwise "go home"
+    if (playerStatus === "HighRoller" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -24,10 +27,13 @@ console.log("Easy 1 - Test 2:", easyProblem1("highroller", 21)); // Should print
 // ============================================
 // Task: Check if playerStatus is NOT "HighRoller" when age is 21
 // Hint: !== means "not equal to"
+
 function easyProblem2(playerStatus, age) {
-    // TODO: Write your code here
-    // Check if age is 21 AND playerStatus is NOT "HighRoller"
-    // Return "can sign in" if true, otherwise "go home"
+    if (age === 21 && playerStatus !== "HighRoller") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -39,11 +45,15 @@ console.log("Easy 2 - Test 2:", easyProblem2("HighRoller", 21)); // Should print
 // ============================================
 // Task: Use && operator to combine conditions
 // Hint: Think about the order of operations
+
 function mediumProblem(playerStatus, age) {
-    // TODO: Write your code here
-    // Use if-else if-else with && operator
-    // Make sure to check all three conditions correctly
-    // Remember: && means BOTH conditions must be true
+    if (playerStatus === "HighRoller" && age === 21) {
+        return "can access";
+    } else if (age === 21 && playerStatus !== "HighRoller") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -57,15 +67,17 @@ console.log("Medium - Test 4:", mediumProblem("VIP", 25)); // Should print: "go 
 // ============================================
 // Task: Check age first, then create nested conditions for playerStatus
 // Hint: Use if inside if (nested if statements)
+
 function hardProblem(playerStatus, age) {
-    // TODO: Write your code here
-    // Step 1: Check if age equals 21
-    //   - If age is 21:
-    //     - Check if playerStatus is "HighRoller" → return "can access"
-    //     - Else (playerStatus is not "HighRoller") → return "can sign in"
-    //   - If age is NOT 21:
-    //     - Return "go home"
-    // Use nested if-else statements!
+    if (age === 21) {
+        if (playerStatus === "HighRoller") {
+            return "can access";
+        } if (playerStatus !== "HighRoller") {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:

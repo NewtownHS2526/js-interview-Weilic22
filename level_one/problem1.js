@@ -63,16 +63,15 @@ console.log("Medium - Test 3:", mediumProblem("Student", 20)); // Should print: 
 // ============================================
 // Task: Create a function that checks age first, then memberType
 // Hint: Use nested if statements - check age first, then memberType inside
+
 function hardProblem(memberType, age) {
     if (age===18) {
         if (memberType==="Premium") {
             return "can access"
-        }
-        if (memberType!=="Premium") {
+        } if (memberType!=="Premium") {
             return "can sign in"
         }
-    }
-    if (age!==18) {
+    } else {
         return "go home"
     }
 }

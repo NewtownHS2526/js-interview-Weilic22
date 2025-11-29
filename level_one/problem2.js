@@ -69,14 +69,15 @@ console.log("Medium - Test 4:", mediumProblem("Student", 20)); // Should print: 
 // ============================================
 // Task: Check age first, then create nested conditions for ticketType
 // Hint: Use if inside if (nested if statements)
+
 function hardProblem(ticketType, age) {
     if (age===16) {
         if (ticketType==="VIP") {
             return "can access"
-        } else if (ticketType!=="VIP") {
+        } if (ticketType!=="VIP") {
             return "can sign in"
         }
-    } else if (age!==16) {
+    } else {
         return "go home"
     }
 }

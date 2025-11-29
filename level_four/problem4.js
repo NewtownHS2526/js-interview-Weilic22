@@ -9,10 +9,13 @@
 // ============================================
 // Task: Check two conditions with &&
 // Hint: && means both must be true
+
 function easyProblem1(attendeeType, age) {
-    // TODO: Write your code here
-    // Check if attendeeType is "Speaker" AND age is 21
-    // Return "can access" if both are true, otherwise "go home"
+    if (attendeeType === "Speaker" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -25,10 +28,13 @@ console.log("Easy 1 - Test 3:", easyProblem1("Attendee", 21)); // Should print: 
 // ============================================
 // Task: Check if something is NOT equal
 // Hint: !== means "not equal to"
+
 function easyProblem2(attendeeType, age) {
-    // TODO: Write your code here
-    // Check if age is 21 AND attendeeType is NOT "Speaker"
-    // Return "can sign in" if true, otherwise "go home"
+    if (age === 21 && attendeeType !== "Speaker") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -41,12 +47,15 @@ console.log("Easy 2 - Test 3:", easyProblem2("VIP", 19)); // Should print: "go h
 // ============================================
 // Task: Use if-else if-else to check all cases
 // Hint: Check conditions one by one
+
 function mediumProblem(attendeeType, age) {
-    // TODO: Write your code here
-    // Write if-else if-else to handle:
-    // 1. attendeeType === "Speaker" && age === 21 → "can access"
-    // 2. age === 21 && attendeeType !== "Speaker" → "can sign in"
-    // 3. All other cases → "go home"
+    if (attendeeType === "Speaker" && age === 21) {
+        return "can access";
+    } else if (age === 21 && attendeeType !== "Speaker") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -61,21 +70,17 @@ console.log("Medium - Test 5:", mediumProblem("Student", 20)); // Should print: 
 // ============================================
 // Task: Create nested if-else statements
 // Hint: Check age first, then check attendeeType inside
+
 function hardProblem(attendeeType, age) {
-    // TODO: Write your code here
-    // Use nested if statements:
-    // 
-    // if (age === 21) {
-    //     if (attendeeType === "Speaker") {
-    //         return "can access"
-    //     } else {
-    //         return "can sign in"
-    //     }
-    // } else {
-    //     return "go home"
-    // }
-    //
-    // Think: Why do we check age first? What happens if age is not 21?
+    if (age === 21) {
+        if (attendeeType === "Speaker") {
+            return "can access";
+        } if (attendeeType !== "Speaker") {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
